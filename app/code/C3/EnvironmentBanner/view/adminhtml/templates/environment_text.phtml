@@ -1,0 +1,26 @@
+
+<?php if ($this->_helper->isDisplayEnvName()): ?>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+<div style="font-size:18px; position:relative; z-index:700; color:white;
+
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+margin-top:200px;
+font-size:32px;
+font-family: 'Roboto Condensed', sans-serif;
+filter:Alpha(opacity=70);
+opacity:0.7;
+letter-spacing: 3px;
+
+">
+   <?php echo strtoupper($this->_helper->getEnvironment()); ?>
+</div>
+<?php endif; ?>

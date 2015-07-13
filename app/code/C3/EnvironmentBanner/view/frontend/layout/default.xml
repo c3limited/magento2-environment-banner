@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <referenceContainer name="content">
+        <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentBanner" template="environment_banner.phtml"/>
+    </referenceContainer>
+</layout>
