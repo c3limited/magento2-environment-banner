@@ -1,0 +1,61 @@
+<?php
+$envHelper = $this->_helper;
+$env = $envHelper->getEnvironment();
+$cols = $envHelper->getEnvColours();
+?>
+<style type="text/css">
+    h2.env {
+        float: left;
+        margin-top: 13px;
+        color: white;
+    }
+    <?php
+    // Change colour of heading if that option is turned on
+    if ($envHelper->isDisplayAdminBanner()):
+    ?>
+
+    .ebborder {
+        position:fixed;
+        z-index: 10000;
+    }
+    #ebtop,#ebbottom {
+        left:0;
+        width:100%;
+        height:3px;
+    }
+    #ebtop {
+        top:0;
+    }
+    #ebbottom {
+        bottom:0;
+    }
+    #ebleft,#ebright {
+        top:0;
+        height:100%;
+        width:3px;
+    }
+    #ebleft {
+        left:0;
+    }
+    #ebright {
+        right:0;
+    }
+
+    .menu-wrapper:before{
+        background-color:<?php echo $cols->getBeColor() ?>;
+    }
+
+    .ebborder {
+        background-color: <?php echo $cols->getBeColor() ?>;
+    }
+    <?php endif; ?>
+</style>
+<?php
+/** @var $this Mage_Adminhtml_Block_Page_Header */
+?>
+
+
+<div id="ebtop" class="ebborder"></div>
+<div id="ebbottom" class="ebborder"></div>
+<div id="ebleft" class="ebborder"></div>
+<div id="ebright" class="ebborder"></div>

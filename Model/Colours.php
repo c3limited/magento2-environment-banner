@@ -53,17 +53,14 @@ class Colours extends \Magento\Framework\Model\AbstractModel
         // If fail to convert, return default hex code
         if ($rgb === null)
             return self::DEFAULT_COLOR;
-        $hsl = self::_convertRgbToHsl($rgb);
 
-        // Change colour to make darker
-        $hsl['l'] = max($hsl['l'] - 0.3, 0.0);
-        $hsl['s'] = min($hsl['s'] + 0.1, 1.0);
 
-        $rgb2 = self::_convertHslToRgb($hsl);
-        $hex = self::_convertRgbToHex($rgb2);
+        $hex = self::_convertRgbToHex($rgb);
 
         return $hex;
     }
+
+
 
     public function getBeBorderColor()
     {

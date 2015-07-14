@@ -1,3 +1,6 @@
+<meta name="viewport" content="width=device-width" />
+
+
 <?php
 /**
  * C3 Media Ltd
@@ -12,11 +15,18 @@
 /** @var C3_EnvironmentBanner_Helper_Data $helper */
 $helper = $this->_helper;
 
+
+
 if ($helper->isDisplayFrontendBanner()):
     $env = $helper->getEnvironment();
     $cols = $helper->getEnvColours();
     ?>
     <style type="text/css">
+
+
+
+
+
         .ribbon-wrapper {
             width: 160px;
             height: 160px;
@@ -29,9 +39,9 @@ if ($helper->isDisplayFrontendBanner()):
 
         .ribbon-inner {
             font: bold 18px Sans-Serif;
-            color: #333;
+            color: rgba(255,255,255,0.5);
             text-align: center;
-            text-shadow:     rgba(255,255,255,0.5) 0px 1px 0px;
+            text-shadow:     #333 0px 1px 0px;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
@@ -44,13 +54,8 @@ if ($helper->isDisplayFrontendBanner()):
             opacity: 0.9;
         }
         .ribbon-inner.<?php echo $env ?> {
-            background-color: <?php echo $cols->getFeLighterBgcolor() ?>;
-            background-image: -webkit-gradient(linear, left top, left bottom, from(<?php echo $cols->getFeLighterBgcolor() ?>), to(<?php echo $cols->getFeBgcolor() ?>));
-            background-image: -webkit-linear-gradient(top, <?php echo $cols->getFeLighterBgcolor() ?>, <?php echo $cols->getFeBgcolor() ?>);
-            background-image: -moz-linear-gradient(top, <?php echo $cols->getFeLighterBgcolor() ?>, <?php echo $cols->getFeBgcolor() ?>);
-            background-image: -ms-linear-gradient(top, <?php echo $cols->getFeLighterBgcolor() ?>, <?php echo $cols->getFeBgcolor() ?>);
-            background-image: -o-linear-gradient(top, <?php echo $cols->getFeLighterBgcolor() ?>, <?php echo $cols->getFeBgcolor() ?>);
-            color: <?php echo $cols->getFeColor() ?>;
+            background-color: <?php echo $cols->getFeColor() ?>;
+            color: <?php echo $cols->getFeBgColor() ?>;
         }
 
 
@@ -85,9 +90,24 @@ if ($helper->isDisplayFrontendBanner()):
         }
 
         .ebborder {
-            background-color: <?php echo $cols->getBeBorderColor() ?>;
+            background-color: <?php echo $cols->getFeColor() ?>;
         }
 
+
+
+        @media all and (max-width: 768px) {
+            .ribbon-inner {
+
+                display:none;
+            }
+
+            .ribbon-inner {
+
+                display:none;
+            }
+
+
+        }
 
     </style>
     <div class="ribbon-wrapper" onclick="document.getElementById('envbanner').style.display = 'none';

@@ -1,11 +1,9 @@
 <?xml version="1.0"?>
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <body>
-        <referenceContainer name="header">
+        <referenceContainer name="login.content">
+            <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentBanner" template="environment_banner.phtml"/>
             <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentBorder" template="environment_border.phtml"/>
-        </referenceContainer>
-        <referenceContainer name="page.menu">
-            <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentText" template="environment_text.phtml" after="menu"/>
         </referenceContainer>
     </body>
 </layout>
