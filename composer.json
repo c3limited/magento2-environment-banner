@@ -1,5 +1,5 @@
 {
-  "name": "c3-environment-banner",
+  "name": "C3/EnvironmentBanner",
   "description": "C3 Environment Banner for Magento 2",
   "type": "magento2-module",
   "version": "0.0.1",
