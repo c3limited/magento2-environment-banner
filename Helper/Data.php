@@ -10,11 +10,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper {
     protected $_environments = null;
     protected $_colours2 = null;
     protected $_colours = null;
-    /**
-     * Whether to display, given environment, settings etc.
-     *
-     * @return bool
-     */
+
     /**
      * @param Context $context
      * @param Colours                $colours
@@ -25,6 +21,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper {
         $this->_colours2 = $colours;
     }
 
+    /**
+     * Whether to display, given environment, settings etc.
+     *
+     * @return bool
+     */
     public function isDisplayFrontendBanner()
     {
         //Check that output is enabled, else return false

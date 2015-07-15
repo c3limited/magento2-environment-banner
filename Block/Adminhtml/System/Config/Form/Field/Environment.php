@@ -10,7 +10,6 @@
 namespace C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field;
 
 class Environment extends \Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray
-//    Mage_Adminhtml_Block_System_Config_Form_Field_Array_Abstract
 {
     public $_helper;
     public function __construct(\Magento\Backend\Block\Template\Context $context, \C3\EnvironmentBanner\Helper\Data $helper) {
