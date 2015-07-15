@@ -13,7 +13,9 @@ class Environment extends \Magento\Config\Block\System\Config\Form\Field\FieldAr
 //    Mage_Adminhtml_Block_System_Config_Form_Field_Array_Abstract
 {
     public $_helper;
-    public function __construct(\Magento\Backend\Block\Template\Context $context, \C3\EnvironmentBanner\Helper\Data $helper, $data = array()) {
+    public function __construct(\Magento\Backend\Block\Template\Context $context, \C3\EnvironmentBanner\Helper\Data $helper) {
+        parent::__construct($context);
+
         $this->_helper = $helper;
 
         $this->addColumn('env', array(
@@ -30,7 +32,5 @@ class Environment extends \Magento\Config\Block\System\Config\Form\Field\FieldAr
         ));
         $this->_addAfter = false;
         $this->_addButtonLabel = 'Add New Environment';
-
-        parent::__construct($context, $data = array());
     }
 }

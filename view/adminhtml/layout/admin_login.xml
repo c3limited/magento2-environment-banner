@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="login.content">
             <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentBanner" template="environment_banner.phtml"/>
             <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentBorder" template="environment_border.phtml"/>
         </referenceContainer>
     </body>
-</layout>
+</page>
