@@ -3,4 +3,4 @@
     <referenceContainer name="content">
         <block class="C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment" name="environmentBanner" template="environment_banner.phtml"/>
     </referenceContainer>
-</page
+</page>
