@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="c3extensions" translate="label" sortOrder="9999999">
-                <label>C3 Extensions</label>
-        </tab>
         <section id="environmentbanner" translate="label" type="text" sortOrder="910" showInDefault="1" showInWebsite="1" showInStore="1">
-                <class>separator-top</class>
-                <label>Environment Banner</label>
-                <tab>c3extensions</tab>
-                <resource>Magento_Config::config_system</resource>
-                <group id="frontend" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Frontend</label>
-                    <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Enabled</label>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    </field>
-                </group>
-                <group id="admin" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Admin</label>
-                    <field id="colour_change" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Change admin banner colour</label>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    </field>
-                    <field id="display_env" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Display environment name</label>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    </field>
-                </group>
-                <group id="environments" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Environments</label>
-                    <field id="environments" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Environment Details</label>
-                        <frontend_model>C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment</frontend_model>
-                        <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
-                    </field>
-                </group>
+            <class>separator-top</class>
+            <label>Environment Banner</label>
+            <tab>advanced</tab>
+            <resource>Magento_Config::config_system</resource>
+            <group id="frontend" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Frontend</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="admin" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Admin</label>
+                <field id="colour_change" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Change admin banner colour</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_env" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display environment name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="environments" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Environments</label>
+                <field id="environments" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Environment Details</label>
+                    <frontend_model>C3\EnvironmentBanner\Block\Adminhtml\System\Config\Form\Field\Environment</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
         </section>
     </system>
 </config>

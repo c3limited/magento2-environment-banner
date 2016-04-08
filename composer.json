@@ -8,12 +8,12 @@
     "magento/magento-composer-installer": "*",
     "magento/framework": "*"
   },
-  "extra": {
-    "map": [
-      [
-        "*",
-        "C3/EnvironmentBanner"
-      ]
-    ]
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "C3\\EnvironmentBanner\\": ""
+    }
   }
 }
