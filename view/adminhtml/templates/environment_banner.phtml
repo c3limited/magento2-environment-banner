@@ -3,17 +3,14 @@ $envHelper = $this->_helper;
 $env = $envHelper->getEnvironment();
 $cols = $envHelper->getEnvColours();
 ?>
+
+<?php if ($envHelper->isDisplayAdminBanner()): ?>
 <style type="text/css">
     h2.env {
         float: left;
         margin-top: 13px;
         color: white;
     }
-    <?php
-    // Change colour of heading if that option is turned on
-    if ($envHelper->isDisplayAdminBanner()):
-    ?>
-
 
     .ribbon-wrapper {
         width: 160px;
@@ -59,7 +56,6 @@ $cols = $envHelper->getEnvColours();
 
 
     }
-
 </style>
 
 <div class="ribbon-wrapper" onclick="document.getElementById('envbanner').style.display = 'none';
