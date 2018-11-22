@@ -3,7 +3,7 @@
   "description": "C3 Environment Banner for Magento 2",
   "type": "magento2-module",
   "require": {
-    "php": "~5.5.0|~5.6.0|~7.0.0",
+    "php": "~5.5.0|~5.6.0|>7",
     "magento/magento-composer-installer": "*",
     "magento/framework": "*"
   },
