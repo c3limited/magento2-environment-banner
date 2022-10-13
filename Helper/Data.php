@@ -85,7 +85,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper {
         // Lazily load environments from config
         if ($this->_environments === null) {
             //$envConfig = unserialize(Mage::getStoreConfig("{$this->_configPrefix}/environments/environments"));
-            $envConfig = json_decode($this->scopeConfig->getValue('environmentbanner/environments/environments', \Magento\Store\Model\ScopeInterface::SCOPE_STORE), true);
+            $envConfig = json_decode($this->scopeConfig->getValue('environmentbanner/environments/environments', \Magento\Store\Model\ScopeInterface::SCOPE_STORE), true) ?: [];
 
             // Make into associative array
             $this->_environments = array();
