@@ -20,6 +20,6 @@ opacity:0.7;
 letter-spacing: 3px;
 
 ">
-   <?php echo strtoupper($this->_helper->getEnvironment()); ?>
+   <?= $this->_helper->getEnvironment() ? strtoupper($this->_helper->getEnvironment()) : ''; ?>
 </div>
 <?php endif; ?>

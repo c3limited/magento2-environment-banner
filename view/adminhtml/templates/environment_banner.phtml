@@ -63,6 +63,6 @@ $cols = $envHelper->getEnvColours();
                                      document.getElementById('ebbottom').style.display = 'none';
                                      document.getElementById('ebleft').style.display = 'none';
                                      document.getElementById('ebright').style.display = 'none';
-                                     " id="envbanner"><div class="ribbon-inner <?php echo $env ?>" title="click to hide"><?php echo ucfirst($env) ?></div>
+                                     " id="envbanner"><div class="ribbon-inner <?php echo $env ?>" title="click to hide"><?= $env ? ucfirst($env) : ''; ?></div>
 </div>
 <?php endif;?>
